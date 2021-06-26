@@ -1,0 +1,18 @@
+package Q2;
+
+public class Clock {
+	private int hour;
+	private int min;
+	
+	public Clock(int hour, int min) 
+	{
+		this.hour = hour; // 0-23
+		this.min = min; // 0-59
+	}
+	
+	// Method for Check length of time 2 flights - getInterval()
+	public int getInterval()
+	{
+		return ((24 - hour) * 60 - min);
+	}
+}

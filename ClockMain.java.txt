@@ -1,0 +1,23 @@
+package Q2;
+import java.util.Scanner;
+
+public class ClockMain {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int N = 2;
+		Clock[] flight = new Clock[N];
+
+		System.out.println("Enter flight 1 time : Hour and Mints");
+		flight[0] = new Clock(input.nextInt(),input.nextInt());
+		System.out.println("Enter flight 2 time : Hour and Mints");
+		flight[1] = new Clock(input.nextInt(),input.nextInt());
+		
+		if (flight[0].getInterval() < flight[1].getInterval())
+			System.out.println("Flight number 1 is the longer travel time: " + flight[0].getInterval());
+		else
+			System.out.println("Flight number 2 is the longer travel time: " +  flight[1].getInterval());
+		
+		input.close();
+	}
+}
